@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block head %}
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/name.js') }}"></script>
+<title>Project2: Flack | Submit Name</title>
+
+{% endblock %}
+
+
+{% block body %}
+
+  <!-- <div class="container"> -->
+    <div class="name-div">
+      <!-- <div class="name-form-div" -->
+        <form id="nameForm">
+          <h5>Register your name to continue:</h5>
+          <div class="input-group">
+            <input type="text" id="nameText" class="form-control input-lg shadow-none" autocomplete="off" autofocus placeholder="Your Name">
+            <div class="input-group-append">
+              <button type="submit" id="nameSubmit" class="btn btn-default">Send</button>
+            </div>
+          </div>
+        </form>
+      <!-- </div> -->
+    </div>
+  <!-- </div> -->
+
+{% endblock %}

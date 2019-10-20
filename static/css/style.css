@@ -1,0 +1,83 @@
+body {
+  font-family: "Helvetica";
+  height: 100%;
+  color: #fff;
+}
+body .name-div {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #002c54;
+}
+body .name-div #nameForm {
+  position: absolute;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+body .split {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+body #channelList {
+  width: 20%;
+  left: 0;
+  background-color: #16253D;
+}
+body #channelMessages {
+  width: 80%;
+  right: 0;
+  background-color: #002c54;
+}
+body .top-div {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body .feed-div {
+  width: 100%;
+  height: calc(100% - 40px - 80px);
+  position: absolute;
+  top: 40px;
+  overflow-y: scroll;
+}
+body .feed-div #channels {
+  list-style-type: none;
+}
+body .input-div {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+}
+body small {
+  color: #CDCDC0;
+}
+body .channel {
+  width: 100%;
+  cursor: pointer;
+}
+body .channel:hover {
+  background-color: #002c54;
+}
+body .active-channel {
+  background-color: #002c54;
+}
+body .hidden-id {
+  display: none;
+}
+
+html, .container {
+  height: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

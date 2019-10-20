@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block head %}
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+<!-- <title>Project2: Flack | Chat</title> -->
+
+{% endblock %}
+
+
+{% block body %}
+
+    <div id="channelList" class="split">
+
+      <div class="top-div">
+        <h4 class="px-4 pt-3 m-0">Hi <a href='/name' id="name"></a>!</h4>
+      </div>
+
+      <div id="channels" class="feed-div">
+        <hr>
+        <h5 class="px-3 pt-2">Channels</h5>
+      </div>
+
+      <div class="input-div">
+        <hr>
+        <form id="channelForm" class="form-inline">
+          <div class="input-group px-3">
+            <input type="text" id="channelName" class="form-control shadow-none" placeholder="Channel Name">
+            <div class="input-group-append">
+              <button type="submit" id="channelSubmit" class="btn btn-default">+</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+    <div id="channelMessages" class="split">
+
+      <div class="top-div">
+        <h4 id="channel" class="px-4 pt-3 m-0"></h4>
+      </div>
+
+      <div id="messages" class="feed-div">
+        <hr>
+      </div>
+
+      <div class="input-div">
+        <hr>
+        <form id="messageForm">
+          <div class="input-group px-3">
+            <input type="text" id="messageText" class="form-control input-lg shadow-none" placeholder="What would you like to say?">
+            <div class="input-group-append">
+              <button type="submit" id="messageSubmit" class="btn btn-default">Send</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+
+{% endblock %}
