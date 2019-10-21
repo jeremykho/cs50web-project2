@@ -6,19 +6,25 @@
 // @import "../bootstrap/scss/bootstrap";
 
 // Sass Variables
-$theme-mist: #90AFC5;
-$theme-stone: #336B87;
-$theme-shadow: #2A3132;
-$theme-autumn: #763626;
 $theme-midnight: #16253D;
 $theme-dusk: #002c54;
-$theme-coal: #2f3131;
 $theme-ceramic: #CDCDC0;
 $theme-font: "Helvetica";
 
-%set-width-to-parent {
-    width: 100%;
-    height: auto;
+// Fade then collapse
+@keyframes hide {
+      0% {
+          opacity: 1;
+      }
+      75% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 0;
+          height: 0px;
+          padding-top: 0px;
+          padding-bottom: 0px;
+      }
 }
 
 body {
@@ -27,11 +33,11 @@ body {
     height: 100%;
     color: #fff;
 
+    // Input name page
     .name-div {
       width: 100%;
       height: 100%;
       position: fixed;
-      // overflow-x: hidden;
       top: 0;
       left: 0;
       background-color: $theme-dusk;
@@ -45,6 +51,7 @@ body {
       }
     }
 
+    // Split screen left-right
     .split {
       height: 100%;
       position: fixed;
@@ -54,47 +61,52 @@ body {
       padding-top: 20px;
     }
 
+    // Left screen
     #channelList {
       width: 20%;
       left: 0;
       background-color: $theme-midnight;
     }
 
+    // Right Screen
     #channelMessages {
       width: 80%;
       right: 0;
       background-color: $theme-dusk;
     }
 
+    // Top Headers
     .top-div {
       width: 100%;
-      height: 40px;
+      height: 80px;
       position: absolute;
       top: 0;
       left: 0;
     }
 
+    // Channel and Message Feed
     .feed-div {
       width: 100%;
-      height: calc(100% - 40px - 80px);
+      height: calc(100% - 80px - 80px);
       position: absolute;
-      top: 40px;
+      top: 80px;
       overflow-y: scroll;
-
-      #channels {
-        list-style-type: none;
-      }
     }
 
+    // Bottom input bar
     .input-div {
       width: 100%;
       height: 80px;
       position: absolute;
       bottom: 0;
+    }
 
-        #messageText {
-          // background-color: $theme-mist;
-        }
+    // Animation for deleting messages
+    .message {
+        animation-name: hide;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-play-state: paused;
     }
 
     small {
@@ -113,11 +125,6 @@ body {
     .active-channel {
       background-color: $theme-dusk;
     }
-
-    .hidden-id {
-      display: none;
-    }
-
 }
 
 html, .container {

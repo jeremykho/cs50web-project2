@@ -4,7 +4,7 @@
 
 <script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
-<!-- <title>Project2: Flack | Chat</title> -->
+<title>Project2: Flack | Chat</title>
 
 {% endblock %}
 
@@ -15,10 +15,10 @@
 
       <div class="top-div">
         <h4 class="px-4 pt-3 m-0">Hi <a href='/name' id="name"></a>!</h4>
+        <hr>
       </div>
 
       <div id="channels" class="feed-div">
-        <hr>
         <h5 class="px-3 pt-2">Channels</h5>
       </div>
 
@@ -40,10 +40,11 @@
 
       <div class="top-div">
         <h4 id="channel" class="px-4 pt-3 m-0"></h4>
+        <hr>
       </div>
 
       <div id="messages" class="feed-div">
-        <hr>
+
       </div>
 
       <div class="input-div">

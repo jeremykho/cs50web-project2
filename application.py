@@ -20,9 +20,16 @@ def name():
 
 @app.route("/message_data", methods=["POST"])
 def message_data():
+    start = int(request.form.get('start'))
+    end = int(request.form.get('end'))
+    # quantity = 20
+
     channel_name = request.form.get('channel')
     channel_list = list(channels.keys())
-    channel_messages = channels[channel_name]['messages']
+    # if start == 1:
+    channel_messages = channels[channel_name]['messages'][-start:-end-1:-1]
+    # else:
+        # channel_messages = channels[channel_name]['messages'][-end:-start+1:-1]
     return jsonify({'channel_list': channel_list,
                     'channel_messages': channel_messages})
 
