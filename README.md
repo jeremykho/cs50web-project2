@@ -6,7 +6,7 @@ This project showcases a Slack-like chat website primarily using Flask and Javas
 
 <b>Features include:</b>
  - Name input
- - Create and updates channels and messages via Web Sockets (SocketIO)
+ - Create and updates channels and messages via Websockets (SocketIO)
  - Javascript fetching data from Flask via AJAX requests
  - Last active channel and user name stored via localStorage
  - Deleting messages with animation via Keyframes
